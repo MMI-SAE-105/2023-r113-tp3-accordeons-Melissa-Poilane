@@ -12,6 +12,7 @@
 <body>
   <h1>Accordéon avec des booléens</h1>
   <div class="accordeon">
+
     <section x-data="{B1: false}">
       <button aria-controls="btn1" @click="B1 = ! B1">bouton 1</button>
       <p id="btn1" x-show="B1" x-transition.duration.500ms>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
@@ -22,9 +23,9 @@
 
     </section>
     <section x-data="{B2: false}">
-
-      <button>bouton 2</button>
-      <p>Pariatur dolores cum neque esse numquam quod veniam nostrum perferendis, dolore officia maiores autem iste
+      <button aria-controls="btn2" @click="B2 = ! B2">bouton 2</button>
+      <p id="btn2" x-show="B2" x-transition.duration.500ms>Pariatur dolores cum neque esse numquam quod veniam nostrum
+        perferendis, dolore officia maiores autem iste
         quidem fuga, harum laboriosam eum! Necessitatibus vitae ratione quibusdam maiores et aut dolorem obcaecati
         magni?</p>
 
