@@ -13,8 +13,9 @@
   <h1>Accordéon avec des booléens</h1>
   <div class="accordeon">
     <section x-data="{B1: false}">
-      <button>bouton 1</button>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cumque amet ex laboriosam dolores necessitatibus,
+      <button aria-controls="btn1" @click="B1 = ! B1">bouton 1</button>
+      <p id="btn1" x-show="B1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cumque amet ex laboriosam
+        dolores necessitatibus,
         perspiciatis adipisci. Tempore fugiat, explicabo voluptatem minus temporibus impedit ea, vitae iusto quidem et
         natus!</p>
 
