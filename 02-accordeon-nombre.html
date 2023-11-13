@@ -30,7 +30,7 @@
   <div class="accordeon" x-data="{estouvert: 0}">
 
     <section>
-      <button aria-controls="btn1" @click="estouvert=1">bouton 1</button>
+      <button @click="estouvert = (estouvert === 1)?0:1">bouton 1</button>
       <p x-show="estouvert === 1" x-transition.duration.500ms>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         Ad
         cumque amet ex laboriosam
@@ -40,7 +40,7 @@
     </section>
 
     <section>
-      <button aria-controls="btn2" @click="estouvert=2">bouton 2</button>
+      <button @click="estouvert=2">bouton 2</button>
       <p x-show="estouvert === 2" x-transition.duration.500ms>Pariatur dolores cum neque esse numquam quod veniam
         nostrum
         perferendis, dolore officia maiores autem iste
@@ -49,7 +49,7 @@
     </section>
 
     <section>
-      <button aria-controls="btn3" @click="estouvert=3">bouton 3</button>
+      <button @click="estouvert=3">bouton 3</button>
       <p id=x-show="estouvert === 3" x-transition.duration.500ms>Aspernatur assumenda possimus quo laborum esse. Quo hic
         ex
         impedit neque nobis doloribus nulla, nemo sed
