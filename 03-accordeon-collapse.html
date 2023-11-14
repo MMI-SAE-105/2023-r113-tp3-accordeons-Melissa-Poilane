@@ -28,9 +28,9 @@
   <h1>Accordéon avec <code>x-collapse</code></h1>
   <div class="accordeon" x-data="{estouvert: 0}">
 
-    <section>
-      <button @click="estouvert = (estouvert === 1)?0:1">bouton 1</button>
-      <p x-show="estouvert === 1" x-collapse>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    <section x-data="{B1: false}">
+      <button aria-controls="btn1" @click="B1 = ! B1">bouton 1</button>
+      <p x-show="B1" x-collapse>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         Ad
         cumque amet ex laboriosam
         dolores necessitatibus,
