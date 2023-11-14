@@ -11,7 +11,6 @@
 
 <body>
   <header>
-    <h1>Accordéon avec <code>x-collapse</code></h1>
     <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menu-Btn">Menu</button>
     <nav id="mainNav" x-show="menuIsOpen" x-transition.duraion.800ms class="menu">
 
@@ -26,6 +25,7 @@
     </nav>
     </nav>
   </header>
+  <h1>Accordéon avec <code>x-collapse</code></h1>
   <div class="accordeon" x-data="{estouvert: 0}">
 
     <section>
