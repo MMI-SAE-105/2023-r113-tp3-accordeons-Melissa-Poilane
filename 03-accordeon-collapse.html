@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Accordéon avec x-collapse</title>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
 <body>
@@ -29,7 +30,7 @@
 
     <section>
       <button @click="estouvert = (estouvert === 1)?0:1">bouton 1</button>
-      <p x-show="estouvert === 1" x-transition.duration.500ms>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      <p x-show="estouvert === 1" x-collaspse>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         Ad
         cumque amet ex laboriosam
         dolores necessitatibus,
