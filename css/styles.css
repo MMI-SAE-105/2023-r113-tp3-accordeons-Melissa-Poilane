@@ -57,12 +57,17 @@
 }
 
 #accordeon li figure figcaption {
-    fais des propriété css pour les commentaires suivants:
-        /* largeur du texte de 200px */
-        /* pour espacer le texte, padding de 10px */
-        /* pour que les éléments soient alignés verticalement */
+    /* largeur du texte de 200px */
+    width: 200px;
 
-        /* espace entre les éléments */
+    /* pour espacer le texte, padding de 10px */
+    padding: 10px;
+
+    /* pour que les éléments soient alignés verticalement */
+    align-items: center;
+
+    /* espace entre les éléments */
+    gap: 10px;
 }
 
 /* Sur tous les enfants de figcation */
