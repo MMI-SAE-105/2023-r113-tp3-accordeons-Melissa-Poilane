@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Accordéon avec x-collapse</title>
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
@@ -28,9 +29,11 @@
   <h1>Accordéon avec <code>x-collapse</code></h1>
   <div class="accordeon" x-data="{estouvert: 0}">
 
-    <section x-data="{B1: false}">
-      <button aria-controls="btn1" @click="B1 = ! B1">bouton 1</button>
-      <p x-show="B1" x-collapse>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    <section>
+      <button @click="estouvert= (estouvert === 1)?0:1">bouton 1</button>
+      <p x-show="estouvert === 1" x-collapse>Lorem ipsum dolor sit amet, consectetur
+        adipisicing
+        elit.
         Ad
         cumque amet ex laboriosam
         dolores necessitatibus,
