@@ -8,6 +8,7 @@
   <title>Accordéon avec x-collapse</title>
   <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -30,7 +31,7 @@
   <div class="accordeon" x-data="{estouvert: 0}">
 
     <section>
-      <button @click="estouvert= (estouvert === 1)?0:1">bouton 1</button>
+      <button class="{ouvert:estouvert, }" @click="estouvert= (estouvert === 1)?0:1">bouton 1</button>
       <p x-show="estouvert === 1" x-collapse>Lorem ipsum dolor sit amet, consectetur
         adipisicing
         elit.
@@ -42,7 +43,7 @@
     </section>
 
     <section>
-      <button @click="estouvert= (estouvert === 2)?0:2">bouton 2</button>
+      <button class="{ouvert:estouvert, }" @click="estouvert= (estouvert === 2)?0:2">bouton 2</button>
       <p x-show="estouvert === 2" x-collapse>Pariatur dolores cum neque esse numquam quod veniam
         nostrum
         perferendis, dolore officia maiores autem iste
@@ -51,7 +52,7 @@
     </section>
 
     <section>
-      <button @click="estouvert= (estouvert === 3)?0:3">bouton 3</button>
+      <button class="{ouvert:estouvert, }" @click="estouvert= (estouvert === 3)?0:3">bouton 3</button>
       <p x-show="estouvert === 3" x-collapse>Aspernatur assumenda possimus quo laborum esse. Quo hic
         ex
         impedit neque nobis doloribus nulla, nemo sed
