@@ -1,12 +1,30 @@
 <!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accordéon horizontal</title>
-  </head>
-  <body>
-    <h1>Accordéon horizontal</h1>
-  </body>
+<html lang="fr" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen}">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accordéon horizontal</title>
+</head>
+
+<body>
+  <header>
+    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menu-Btn">Menu</button>
+    <nav id="mainNav" x-show="menuIsOpen" x-transition.duraion.800ms class="menu">
+
+      <ul>
+        <li><a href="01-accordeon-booleen.html">Accordéon booleen</a></li>
+        <li><a href="02-accordeon-nombre.html">Accordéon nombre</a></li>
+        <li><a href="03-accordeon-collapse.html">Accordéon collapse</a></li>
+        <li><a href="04-accordeon-horizontal.html">Accordéon horizontal</a></li>
+        <li><a href="05-onglets.html">Onglets</a></li>
+        <li><a href="index.html">index</a></li>
+      </ul>
+    </nav>
+    </nav>
+  </header>
+  <h1>Accordéon horizontal</h1>
+</body>
+
 </html>
