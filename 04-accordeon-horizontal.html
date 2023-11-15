@@ -28,8 +28,8 @@
   </header>
   <h1>Accordéon horizontal</h1>
   <ul id="accordeon">
-    <li>
-      <figure>
+    <li :class="{actif:isOpen === 1,}" @click="isOpen= (isOpen === 1)?0:1">
+      <figure x-show="estouvert === 1" x-collapse>
         <img src=" https://picsum.photos/100?random=1" alt="Une image random" width="109" height="77">
         <figcaption>
           <h3>Lorem, ipsum dolor.</h3>
@@ -37,8 +37,8 @@
         </figcaption>
       </figure>
     </li>
-    <li>
-      <figure>
+    <li :class="{actif:isOpen === 2,}" @click="isOpen= (isOpen=== 2)?0:2">
+      <figure x-show="estouvert === 2" x-collapse>
         <img src="https://picsum.photos/100?random=2" alt="Une image random" width="109" height="77">
         <figcaption>
           <h3>Libero, expedita alias!</h3>
@@ -46,8 +46,8 @@
         </figcaption>
       </figure>
     </li>
-    <li>
-      <figure>
+    <li :class="{actif:isOpen === 3,}" @click="isOpen= (isOpen === 3)?0:3">
+      <figure x-show="estouvert === 2" x-collapse>
         <img src="https://picsum.photos/100?random=3" alt="Une image random" width="109" height="77">
         <figcaption>
           <h3>Fugit, numquam maiores?</h3>
