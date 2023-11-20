@@ -28,36 +28,39 @@
     </nav>
   </header>
   <h1>Accordéon horizontal</h1>
-  <ul id="accordeon">
-    <li>
-      <figure :class="{actif:isOpen === 1,}" @click="isOpen= (isOpen === 1)?0:1">
-        <img x-show="isOpen === 1" x-collapse src=" https://picsum.photos/100?random=1" alt="Une image random"
-          width="109" height="77">
-        <figcaption>
-          <h3>Lorem, ipsum dolor.</h3>
-          <p>Lorem ipsum dolor sit amet consectetur.</p>
-        </figcaption>
-      </figure>
-    </li>
-    <li :class="{actif:isOpen === 2,}" @click="isOpen= (isOpen=== 2)?0:2">
-      <figure x-show="isOpen=== 2" x-collapse>
-        <img src="https://picsum.photos/100?random=2" alt="Une image random" width="109" height="77">
-        <figcaption>
-          <h3>Libero, expedita alias!</h3>
-          <p>Nobis dolor nihil aut illum ea!</p>
-        </figcaption>
-      </figure>
-    </li>
-    <li :class="{actif:isOpen === 3,}" @click="isOpen= (isOpen === 3)?0:3">
-      <figure x-show="isOpen === 3" x-collapse>
-        <img src="https://picsum.photos/100?random=3" alt="Une image random" width="109" height="77">
-        <figcaption>
-          <h3>Fugit, numquam maiores?</h3>
-          <p>Ut quam blanditiis qui velit ex!</p>
-        </figcaption>
-      </figure>
-    </li>
-  </ul>
+  <div>
+    <ul id="accordeon" x-data="{estouvert=1}">
+      <li :class="{actif:(estouvert===1)}" @click="estouvert=1">
+        <figure>
+          <img src=" https://picsum.photos/100?random=1" alt="Une image random" width="102">
+          <figcaption>
+            <h3>Lorem, ipsum dolor.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+          </figcaption>
+        </figure>
+      </li>
+
+
+      <li x-data="{estouvert1:false}">
+        <figure aria-controls="F1" @click="estouvert1 = ! estouvert1" :class="actif=true">
+          <img src="https://picsum.photos/100?random=2" alt="Une image random" width="109" height="77">
+          <figcaption id="F1" x-show="estouvert1" x-collapse>
+            <h3>Libero, expedita alias!</h3>
+            <p>Nobis dolor nihil aut illum ea!</p>
+          </figcaption>
+        </figure>
+      </li>
+      <li :class="{actif:isOpen === 3,}" @click="isOpen= (isOpen === 3)?0:3">
+        <figure x-show="isOpen === 3" x-collapse>
+          <img src="https://picsum.photos/100?random=3" alt="Une image random" width="109" height="77">
+          <figcaption>
+            <h3>Fugit, numquam maiores?</h3>
+            <p>Ut quam blanditiis qui velit ex!</p>
+          </figcaption>
+        </figure>
+      </li>
+    </ul>
+  </div>
 </body>
 
 </html>

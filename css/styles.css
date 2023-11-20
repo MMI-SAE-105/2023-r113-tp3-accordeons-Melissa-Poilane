@@ -22,7 +22,7 @@
     overflow: hidden;
 
     /* pour l'animation, transition sur width */
-    transition: width 0.5s;
+    transition: width 1s;
 
     /* couleur de fond #eee */
     background-color: #eee;
