@@ -1,12 +1,52 @@
 <!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Onglets</title>
-  </head>
-  <body>
-    <h1>Onglets</h1>
-  </body>
+<html lang="fr" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen}">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accordéon avec des booléens</title>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menu-Btn">Menu</button>
+    <nav id="mainNav" x-show="menuIsOpen" x-transition.duraion.800ms class="menu">
+
+      <ul>
+        <li><a href="01-accordeon-booleen.html">Accordéon booleen</a></li>
+        <li><a href="02-accordeon-nombre.html">Accordéon nombre</a></li>
+        <li><a href="03-accordeon-collapse.html">Accordéon collapse</a></li>
+        <li><a href="04-accordeon-horizontal.html">Accordéon horizontal</a></li>
+        <li><a href="05-onglets.html">Onglets</a></li>
+        <li><a href="index.html">index</a></li>
+      </ul>
+    </nav>
+    </nav>
+  </header>
+  <h1>Onglets</h1>
+  
+  <div id="onglets" x-data="{ ouvert : 1 }">
+    <ul role="tablist">
+      <li role="tab">Onglet 1</li>
+      <div role="tabpanel" x-show="ouvert === 1" :class="ouvert === 1 ? 'active' : 'inactive'">
+        <h1>Panneau 1</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit...</p>
+      </div>
+      <li role="tab">Onglet 2</li>
+      <div role="tabpanel" x-show="ouvert === 2" :class="ouvert === 2 ? 'active' : 'inactive'">
+        <h1>Panneau 2</h1>
+        <p>Quibusdam nostrum eos facilis numquam hic fugiat impedit veniam?...</p>
+      </div>
+      <li role="tab">Onglet 3</li>
+      <div role="tabpanel" x-show="ouvert === 3" :class="ouvert === 3 ? 'active' : 'inactive'">
+        <h1>Panneau 3</h1>
+        <p>Nemo nostrum beatae consequuntur laudantium sunt delectus, ipsum corrupti...</p>
+      </div>
+    </ul>
+  </div>
+ </div>
+</body>
+
 </html>

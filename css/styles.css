@@ -78,3 +78,17 @@
     /* pour éviter les "padding" par défaut */
     padding: 0;
 }
+
+#onglets {
+    position: relative;
+    height: 500px;
+    width: 500px;
+  }
+
+  .active {
+    opacity: 1;
+  }
+
+  .inactive {
+    opacity: 0;
+  }
