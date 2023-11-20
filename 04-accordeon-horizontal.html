@@ -29,8 +29,8 @@
   </header>
   <h1>Accordéon horizontal</h1>
   <div>
-    <ul id="accordeon" x-data="{estouvert=1}">
-      <li :class="{actif:(estouvert===1)}" @click="estouvert=1">
+    <ul x-data="{estouvert:2}" id="accordeon">
+      <li :class="{actif:estouvert===1}" @click="estouvert=1">
         <figure>
           <img src=" https://picsum.photos/100?random=1" alt="Une image random" width="102">
           <figcaption>
@@ -41,17 +41,17 @@
       </li>
 
 
-      <li x-data="{estouvert1:false}">
-        <figure aria-controls="F1" @click="estouvert1 = ! estouvert1" :class="actif=true">
+      <li :class="{actif:estouvert===2}" @click="estouvert= (estouvert === 2)?0:2">
+        <figure>
           <img src="https://picsum.photos/100?random=2" alt="Une image random" width="109" height="77">
-          <figcaption id="F1" x-show="estouvert1" x-collapse>
+          <figcaption>
             <h3>Libero, expedita alias!</h3>
             <p>Nobis dolor nihil aut illum ea!</p>
           </figcaption>
         </figure>
       </li>
-      <li :class="{actif:isOpen === 3,}" @click="isOpen= (isOpen === 3)?0:3">
-        <figure x-show="isOpen === 3" x-collapse>
+      <li :class="{actif:estouvert===3}" @click="estouvert= (estouvert === 3)?0:3">
+        <figure>
           <img src="https://picsum.photos/100?random=3" alt="Une image random" width="109" height="77">
           <figcaption>
             <h3>Fugit, numquam maiores?</h3>
