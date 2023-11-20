@@ -29,8 +29,8 @@
   <div class="accordeon">
 
     <section x-data="{B1: false}">
-      <button aria-controls="btn1" @click="B1=true, B2=false, B3=false">bouton 1</button>
-      <p id="btn1" x-show="B1" x-transition.duration.500ms>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+      <button aria-controls="B1" @click="B1 = !B1">bouton 1</button>
+      <p id="B1" x-show="B1" x-transition.duration.500ms>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
         cumque amet ex laboriosam
         dolores necessitatibus,
         perspiciatis adipisci. Tempore fugiat, explicabo voluptatem minus temporibus impedit ea, vitae iusto quidem et
@@ -38,16 +38,16 @@
     </section>
 
     <section x-data="{B2: false}">
-      <button aria-controls="btn2" @click="B1=false, B2=true, B3=false">bouton 2</button>
-      <p id="btn2" x-show="B2" x-transition.duration.500ms>Pariatur dolores cum neque esse numquam quod veniam nostrum
+      <button aria-controls="B2" @click="B2=!B2">bouton 2</button>
+      <p id="B2" x-show="B2" x-transition.duration.500ms>Pariatur dolores cum neque esse numquam quod veniam nostrum
         perferendis, dolore officia maiores autem iste
         quidem fuga, harum laboriosam eum! Necessitatibus vitae ratione quibusdam maiores et aut dolorem obcaecati
         magni?</p>
     </section>
 
     <section x-data="{B3: false}">
-      <button aria-controls="btn3" @click="B1=false, B2=false, B3=true">bouton 3</button>
-      <p id="btn3" x-show="B3" x-transition.duration.500ms>Aspernatur assumenda possimus quo laborum esse. Quo hic ex
+      <button aria-controls="B3" @click="B3=!B3">bouton 3</button>
+      <p id="B3" x-show="B3" x-transition.duration.500ms>Aspernatur assumenda possimus quo laborum esse. Quo hic ex
         impedit neque nobis doloribus nulla, nemo sed
         repellat eaque dolorum quis veritatis deleniti. Eveniet quis illum at quia animi facere voluptas!</p>
     </section>
