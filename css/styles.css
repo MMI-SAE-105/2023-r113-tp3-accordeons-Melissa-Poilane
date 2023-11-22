@@ -83,12 +83,19 @@
     position: relative;
     height: 500px;
     width: 500px;
-  }
+}
 
-  .active {
-    opacity: 1;
-  }
 
-  .inactive {
+#onglets>* {
+    position: absolute;
     opacity: 0;
-  }
+    transition: opacity 0.5s;
+}
+
+#onglets>.active {
+    opacity: 1;
+}
+
+[role="tablist"] {
+    position: absolute;
+}

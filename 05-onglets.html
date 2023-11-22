@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Accordéon avec des booléens</title>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -26,27 +27,36 @@
     </nav>
   </header>
   <h1>Onglets</h1>
-  
-  <div id="onglets" x-data="{ ouvert : 1 }">
-    <ul role="tablist">
-      <li role="tab">Onglet 1</li>
-      <div role="tabpanel" x-show="ouvert === 1" :class="ouvert === 1 ? 'active' : 'inactive'">
-        <h1>Panneau 1</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit...</p>
-      </div>
-      <li role="tab">Onglet 2</li>
-      <div role="tabpanel" x-show="ouvert === 2" :class="ouvert === 2 ? 'active' : 'inactive'">
-        <h1>Panneau 2</h1>
-        <p>Quibusdam nostrum eos facilis numquam hic fugiat impedit veniam?...</p>
-      </div>
-      <li role="tab">Onglet 3</li>
-      <div role="tabpanel" x-show="ouvert === 3" :class="ouvert === 3 ? 'active' : 'inactive'">
-        <h1>Panneau 3</h1>
-        <p>Nemo nostrum beatae consequuntur laudantium sunt delectus, ipsum corrupti...</p>
-      </div>
+
+  <div id=" onglets" x-data="{ ouvert:  0 }">
+    <ul class="flex">
+      <li @click="ouvert = 0" role="tab" :class="{ 'active': ouvert === 0 }">Onglet 1</li>
+      <li @click="ouvert = 1" role="tab" :class="{ 'active': ouvert === 1 }">Onglet 2</li>
+      <li @click="ouvert = 2" role="tab" :class="{ 'active': ouvert === 2 }">Onglet 3</li>
     </ul>
+
+    <div role="tabpanel" :class="{ 'active': ouvert === 0 }" x-show.transition.in.opacity.duration.600="ouvert === 0">
+      <h1>Panneau 1</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nihil quod deleniti ratione sit. Corrupti
+        quos
+        praesentium consequatur placeat qui. Eius corporis voluptas, aliquid asperiores et consequuntur dolor
+        maiores
+        veritatis?</p>
+    </div>
+    <div role="tabpanel" :class="{ 'active': ouvert === 1 }" x-show.transition.in.opacity.duration.600="ouvert === 1">
+      <h1>Panneau 2</h1>
+      <p>Sed molestias dolor tenetur fugiat repellendus quas ea perferendis! Harum iste quos reiciendis amet error
+        optio ipsum, obcaecati id quae libero, sit quibusdam sed culpa dolor sunt quod! Quisquam, autem.</p>
+    </div>
+
+    <div role="tabpanel" :class="{ 'active': ouvert === 2 }" x-show.transition.in.opacity.duration.600="ouvert === 2">
+      <h1>Panneau 3</h1>
+      <p>Neque dolore, aliquam itaque, inventore asperiores sapiente vel explicabo delectus in tempora id mollitia
+        praesentium ea dolor eius amet officia maxime molestiae doloremque corrupti ut pariatur, eveniet dicta
+        dignissimos! Aspernatur?</p>
+    </div>
   </div>
- </div>
+
 </body>
 
 </html>
