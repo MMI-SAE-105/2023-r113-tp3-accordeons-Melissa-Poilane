@@ -30,7 +30,7 @@
   <h1>Accordéon horizontal</h1>
   <div>
     <ul x-data="{estouvert:2}" id="accordeon">
-      <li :class="{actif:estouvert===1}" @click="estouvert=1">
+      <li :class="{actif:estouvert===1}" @click="estouvert= (estouvert === 1)?0:1">
         <figure>
           <img src=" https://picsum.photos/100?random=1" alt="Une image random" width="102">
           <figcaption>
@@ -39,7 +39,6 @@
           </figcaption>
         </figure>
       </li>
-
 
       <li :class="{actif:estouvert===2}" @click="estouvert= (estouvert === 2)?0:2">
         <figure>
@@ -50,9 +49,10 @@
           </figcaption>
         </figure>
       </li>
+
       <li :class="{actif:estouvert===3}" @click="estouvert= (estouvert === 3)?0:3">
         <figure>
-          <img src="https://picsum.photos/100?random=3" alt="Une image random" width="102" >
+          <img src="https://picsum.photos/100?random=3" alt="Une image random" width="102">
           <figcaption>
             <h3>Fugit, numquam maiores?</h3>
             <p>Ut quam blanditiis qui velit ex!</p>
