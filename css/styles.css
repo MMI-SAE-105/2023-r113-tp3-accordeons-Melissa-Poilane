@@ -96,6 +96,13 @@
     opacity: 1;
 }
 
-[role="tablist"] {
+
+[ role="tabpanel"] {
     position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+[ role="tabpanel"].active {
+    opacity: 1;
 }

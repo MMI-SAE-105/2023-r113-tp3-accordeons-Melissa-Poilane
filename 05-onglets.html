@@ -28,14 +28,14 @@
   </header>
   <h1>Onglets</h1>
 
-  <div id=" onglets" x-data="{ ouvert:  0 }">
-    <ul class="flex">
-      <li @click="ouvert = 0" role="tab" :class="{ 'active': ouvert === 0 }">Onglet 1</li>
-      <li @click="ouvert = 1" role="tab" :class="{ 'active': ouvert === 1 }">Onglet 2</li>
-      <li @click="ouvert = 2" role="tab" :class="{ 'active': ouvert === 2 }">Onglet 3</li>
+  <div id=" onglets" x-data="{ouvert}">
+    <ul role="tablist">
+      <li @click="ouvert = 0" role="tab" :class="{ 'actif': ouvert === 0 }">Onglet 1</li>
+      <li @click="ouvert = 1" role="tab" :class="{ 'actif': ouvert === 1 }">Onglet 2</li>
+      <li @click="ouvert = 2" role="tab" :class="{ 'actif': ouvert === 2 }">Onglet 3</li>
     </ul>
 
-    <div role="tabpanel" :class="{ 'active': ouvert === 0 }" x-show.transition.in.opacity.duration.600="ouvert === 0">
+    <div role="tabpanel" :class="{ 'active': ouvert === 0 }" class="active">
       <h1>Panneau 1</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nihil quod deleniti ratione sit. Corrupti
         quos
@@ -43,13 +43,13 @@
         maiores
         veritatis?</p>
     </div>
-    <div role="tabpanel" :class="{ 'active': ouvert === 1 }" x-show.transition.in.opacity.duration.600="ouvert === 1">
+    <div role="tabpanel" :class="{ 'active': ouvert === 1 }" class="active">
       <h1>Panneau 2</h1>
       <p>Sed molestias dolor tenetur fugiat repellendus quas ea perferendis! Harum iste quos reiciendis amet error
         optio ipsum, obcaecati id quae libero, sit quibusdam sed culpa dolor sunt quod! Quisquam, autem.</p>
     </div>
 
-    <div role="tabpanel" :class="{ 'active': ouvert === 2 }" x-show.transition.in.opacity.duration.600="ouvert === 2">
+    <div role="tabpanel" :class="{ 'active': ouvert === 2 }" class="active">
       <h1>Panneau 3</h1>
       <p>Neque dolore, aliquam itaque, inventore asperiores sapiente vel explicabo delectus in tempora id mollitia
         praesentium ea dolor eius amet officia maxime molestiae doloremque corrupti ut pariatur, eveniet dicta
