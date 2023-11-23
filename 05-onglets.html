@@ -27,36 +27,32 @@
     </nav>
   </header>
   <h1>Onglets</h1>
-
-  <div id=" onglets" x-data="{ouvert}">
+  <div id="onglets" x-data="{ ouvert: 1 }">
     <ul role="tablist">
-      <li @click="ouvert = 0" role="tab" :class="{ 'actif': ouvert === 0 }">Onglet 1</li>
-      <li @click="ouvert = 1" role="tab" :class="{ 'actif': ouvert === 1 }">Onglet 2</li>
-      <li @click="ouvert = 2" role="tab" :class="{ 'actif': ouvert === 2 }">Onglet 3</li>
+      <li role="tab" :class="{ 'actif': ouvert === 1 }" @click="ouvert = 1">Onglet 1</li>
+      <li role="tab" :class="{ 'actif': ouvert === 2 }" @click="ouvert = 2">Onglet 2</li>
+      <li role="tab" :class="{ 'actif': ouvert === 3 }" @click="ouvert = 3">Onglet 3</li>
     </ul>
-
-    <div role="tabpanel" :class="{ 'active': ouvert === 0 }" class="active">
-      <h1>Panneau 1</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nihil quod deleniti ratione sit. Corrupti
-        quos
-        praesentium consequatur placeat qui. Eius corporis voluptas, aliquid asperiores et consequuntur dolor
-        maiores
-        veritatis?</p>
-    </div>
-    <div role="tabpanel" :class="{ 'active': ouvert === 1 }" class="active">
-      <h1>Panneau 2</h1>
-      <p>Sed molestias dolor tenetur fugiat repellendus quas ea perferendis! Harum iste quos reiciendis amet error
-        optio ipsum, obcaecati id quae libero, sit quibusdam sed culpa dolor sunt quod! Quisquam, autem.</p>
-    </div>
-
-    <div role="tabpanel" :class="{ 'active': ouvert === 2 }" class="active">
-      <h1>Panneau 3</h1>
-      <p>Neque dolore, aliquam itaque, inventore asperiores sapiente vel explicabo delectus in tempora id mollitia
-        praesentium ea dolor eius amet officia maxime molestiae doloremque corrupti ut pariatur, eveniet dicta
-        dignissimos! Aspernatur?</p>
+    <div>
+      <div :class="{ 'active': ouvert === 1 }" class="active" role="tabpanel">
+        <h1>Panneau 1</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis delectus voluptates nam quo tenetur magni ea
+          nostrum odit harum magnam! Eveniet fugit maxime vitae quis temporibus, illum cumque. Pariatur, laudantium.</p>
+      </div>
+      <div :class="{ 'active': ouvert === 2 }" class="active" role="tabpanel">
+        <h1>Panneau 2</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est quisquam mollitia repudiandae rem, eligendi
+          quia numquam porro eius placeat ipsam! Quam, reiciendis modi? Numquam maxime sunt molestiae, maiores sapiente
+          ad?</p>
+      </div>
+      <div :class="{ 'active': ouvert === 3 }" class="active" role="tabpanel">
+        <h1>Panneau 3</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quidem rem dolorum quis totam at, maiores
+          ab blanditiis porro consequatur cumque reprehenderit laboriosam sint. Suscipit architecto asperiores fugit
+          delectus labore.</p>
+      </div>
     </div>
   </div>
-
 </body>
 
 </html>

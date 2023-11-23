@@ -79,30 +79,42 @@
     padding: 0;
 }
 
-#onglets {
+#onglets ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#onglets ul li {
+    padding: 10px 15px;
+    cursor: pointer;
+
+}
+
+#onglets ul li.actif {
+    border: none;
+    background-color: #B0DFF5;
+
+}
+
+
+#onglets div {
     position: relative;
-    height: 500px;
-    width: 500px;
+    height: 200px;
+    width: 100%;
+
 }
 
-
-#onglets>* {
+#onglets div>div {
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: opacity 0.3s ease;
 }
 
-#onglets>.active {
-    opacity: 1;
-}
-
-
-[ role="tabpanel"] {
-    position: absolute;
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-[ role="tabpanel"].active {
+#onglets div>div.active {
     opacity: 1;
 }
