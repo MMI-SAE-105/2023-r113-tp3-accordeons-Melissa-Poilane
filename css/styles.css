@@ -92,10 +92,21 @@
 
 }
 
-#onglets ul li.actif {
-    border: none;
-    background-color: #B0DFF5;
+#onglets ul li {
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: gray; /* couleur de fond pour les onglets non actifs */
+    
+    border-top-left-radius: 5px; /* arrondit le coin supérieur gauche */
+    border-top-right-radius: 5px; /* arrondit le coin supérieur droit */
+}
 
+#onglets ul li.actif {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-top-left-radius: 10px; /* arrondit le coin supérieur gauche */
+    border-top-right-radius: 10px; /* arrondit le coin supérieur droit */
+    background-color: aquamarine; /* couleur de fond pour l'onglet actif */
 }
 
 
@@ -119,3 +130,4 @@
 #onglets div>div.active {
     opacity: 1;
 }
+
