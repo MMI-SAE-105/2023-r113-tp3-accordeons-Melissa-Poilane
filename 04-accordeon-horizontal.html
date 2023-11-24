@@ -13,7 +13,9 @@
 
 <body>
   <header>
-    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menu-Btn">Menu</button>
+    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menu-Btn">
+      <span class="menu-btn__bar"></span>
+    </button>
     <nav id="mainNav" x-show="menuIsOpen" x-transition.duraion.800ms class="menu">
 
       <ul>

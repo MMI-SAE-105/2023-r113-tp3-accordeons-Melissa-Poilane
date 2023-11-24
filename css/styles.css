@@ -89,13 +89,14 @@
 #onglets ul li {
     padding: 10px 15px;
     cursor: pointer;
-
+    color: #282627;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #onglets ul li {
     padding: 10px 15px;
     cursor: pointer;
-    background-color: gray; /* couleur de fond pour les onglets non actifs */
+    background-color: #E9A7AF; 
     
     border-top-left-radius: 5px; /* arrondit le coin supérieur gauche */
     border-top-right-radius: 5px; /* arrondit le coin supérieur droit */
@@ -106,9 +107,9 @@
     cursor: pointer;
     border-top-left-radius: 10px; /* arrondit le coin supérieur gauche */
     border-top-right-radius: 10px; /* arrondit le coin supérieur droit */
-    background-color: aquamarine; /* couleur de fond pour l'onglet actif */
+    background-color: #FFF; /* couleur de fond pour l'onglet actif */
+    color: #282627;
 }
-
 
 #onglets div {
     position: relative;
@@ -117,6 +118,7 @@
 
 }
 
+
 #onglets div>div {
     position: absolute;
     top: 0;
@@ -124,10 +126,58 @@
     width: 100%;
     opacity: 0;
     transition: opacity 0.3s ease;
-    background-color: green;
+    color: #282627;
+    background-color: white;
+    border-radius: 3px; /* bordures arrondies */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    padding: 20px; /* espace intérieur */
 }
 
 #onglets div>div.active {
     opacity: 1;
 }
 
+
+body {
+    font-size: 14px;
+    color: #FFF;
+    background-color: #282627;
+}
+
+.header__menu-Btn {
+    position: relative;
+    z-index: 10;
+    border-radius: 5px;
+    padding: 15px;
+  }
+
+  button {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .menu-btn__bar,
+.menu-btn__bar::before,
+.menu-btn__bar::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    border-radius: 5px;
+}
+
+.menu-btn__bar::before {
+    top: -10px;
+}
+
+.menu-btn__bar::after {
+    top: 10px;
+}
