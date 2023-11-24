@@ -1,3 +1,3 @@
 - nom : Poilâne
 - prénom :Mélissa
-- URL publique du site : https://tp3-4-melissa-poilane.netlify.app/
+- URL publique du site : http://netlify-accordeon.melissapoilane.fr/ 
