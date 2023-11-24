@@ -1,8 +1,10 @@
 .ouvert {
-    background-color: blueviolet;
-    color: white;
+    color: #E9A7AF;
+    border: 10px solid #282627;
 }
-
+.btnacc {
+    color: #FFF;
+}
 #accordeon {
     /* pour que les éléments soient alignés horizontalement */
     display: flex;
@@ -38,11 +40,14 @@
 
     /* pour arrondir les bords de 5px */
     border-radius: 5px;
+   color: #282627; 
 }
 
 #accordeon li.actif {
     /* largeur de l'élément déplié 317px */
     width: 317px;
+    
+    
 }
 
 #accordeon li figure {
@@ -142,6 +147,7 @@ body {
     font-size: 14px;
     color: #FFF;
     background-color: #282627;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .header__menu-Btn {
@@ -158,6 +164,7 @@ body {
     background: none;
     padding: 0;
     cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
   .menu-btn__bar,
@@ -180,4 +187,30 @@ body {
 
 .menu-btn__bar::after {
     top: 10px;
+}
+
+.menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #E9A7AF;
+    z-index: 5;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+.menu ul {
+    list-style-type: none; /* enlève les puces */
+    color: #282627;
+}
+.menu ul li a {
+    text-decoration: none; /* enlève le soulignement */
+    color: inherit; /* hérite la couleur du texte du parent */
+}
+.menu ul li {
+    margin: 30px 0; /* ajoute une marge en haut et en bas */
+    font-size: 1.2rem; /* taille du texte */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

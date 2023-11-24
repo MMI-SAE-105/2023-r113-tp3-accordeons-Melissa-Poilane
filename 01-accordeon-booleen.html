@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Accordéon avec des booléens</title>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -31,7 +32,7 @@
   <div class="accordeon">
 
     <section x-data="{B1: false}">
-      <button aria-controls="B1" @click="B1 = !B1">bouton 1</button>
+      <button class="btnacc" aria-controls="B1" @click="B1 = !B1">bouton 1</button>
       <p id="B1" x-show="B1" x-transition.duration.500ms>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
         cumque amet ex laboriosam
         dolores necessitatibus,
@@ -40,7 +41,7 @@
     </section>
 
     <section x-data="{B2: false}">
-      <button aria-controls="B2" @click="B2=!B2">bouton 2</button>
+      <button class="btnacc" aria-controls="B2" @click="B2=!B2">bouton 2</button>
       <p id="B2" x-show="B2" x-transition.duration.500ms>Pariatur dolores cum neque esse numquam quod veniam nostrum
         perferendis, dolore officia maiores autem iste
         quidem fuga, harum laboriosam eum! Necessitatibus vitae ratione quibusdam maiores et aut dolorem obcaecati
@@ -48,7 +49,7 @@
     </section>
 
     <section x-data="{B3: false}">
-      <button aria-controls="B3" @click="B3=!B3">bouton 3</button>
+      <button class="btnacc" aria-controls="B3" @click="B3=!B3">bouton 3</button>
       <p id="B3" x-show="B3" x-transition.duration.500ms>Aspernatur assumenda possimus quo laborum esse. Quo hic ex
         impedit neque nobis doloribus nulla, nemo sed
         repellat eaque dolorum quis veritatis deleniti. Eveniet quis illum at quia animi facere voluptas!</p>
